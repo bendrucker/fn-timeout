@@ -1,0 +1,33 @@
+{
+  "name": "fn-timeout",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Wrap an async function to time out after a specified interval",
+  "license": "MIT",
+  "repository": "bendrucker/fn-timeout",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "timeout",
+    "function",
+    "async"
+  ],
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "standard": "^6.0.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "ap": "~0.2.0",
+    "assert-equal": "~1.0.0",
+    "once": "~1.3.3"
+  }
+}
