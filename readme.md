@@ -45,15 +45,6 @@ A time limit in milliseconds.
 Type: `string`  
 Default: `"timed out"`
 
-##### options
-
-###### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
-
 
 ## License
 
