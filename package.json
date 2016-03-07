@@ -1,7 +1,7 @@
 {
   "name": "fn-timeout",
   "main": "index.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Wrap an async function to time out after a specified interval",
   "license": "MIT",
   "repository": "bendrucker/fn-timeout",
