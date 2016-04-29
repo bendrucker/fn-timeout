@@ -22,7 +22,7 @@ var fn = timeout(function (err, data) {
 
 ## API
 
-#### `timeout(callback, delay, [message])` -> `function`
+#### `timeout(callback, delay, [error])` -> `function`
 
 Returns the original `callback`
 
@@ -40,10 +40,16 @@ Type: `number`
 
 A time limit in milliseconds.
 
-##### message
+##### error
 
-Type: `string`  
-Default: `"timed out"`
+Type: `object`  
+Default: `{message: 'Operation timed out after {delay} ms'}`
+
+An object with error. The following template values can be used in your custom message:
+
+* delay: the specified delay for the timeout
+
+You can also add additional values of your own. They will be appended to the `err` object and available for templating in the message.
 
 
 ## License

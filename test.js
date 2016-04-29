@@ -14,12 +14,32 @@ test('success', function (t) {
 })
 
 test('timeout', function (t) {
-  t.plan(2)
+  t.plan(4)
 
   var fn = timeout(function (err, data) {
     t.ok(err)
-    t.equal(err.message, 'too slow')
-  }, 15, 'too slow')
+    t.equal(err.message, 'Operation timed out after 15 ms')
+    t.equal(err.type, 'timeout')
+    t.equal(err.delay, 15)
+  }, 15)
+  setTimeout(function () {
+    fn(null, 1)
+  }, 30)
+})
+
+test('timeout with custom error', function (t) {
+  t.plan(4)
+
+  var fn = timeout(function (err, data) {
+    t.ok(err)
+    t.equal(err.message, 'too slow, you had 15 to do the thing')
+    t.equal(err.type, 'foo.timeout')
+    t.equal(err.delay, 15)
+  }, 15, {
+    message: 'too slow, you had {delay} to do {action}',
+    action: 'the thing',
+    type: 'foo.timeout'
+  })
   setTimeout(function () {
     fn(null, 1)
   }, 30)
