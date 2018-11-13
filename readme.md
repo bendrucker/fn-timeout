@@ -1,4 +1,4 @@
-# fn-timeout [![Build Status](https://travis-ci.org/bendrucker/fn-timeout.svg?branch=master)](https://travis-ci.org/bendrucker/fn-timeout)
+# fn-timeout [![Build Status](https://travis-ci.org/bendrucker/fn-timeout.svg?branch=master)](https://travis-ci.org/bendrucker/fn-timeout) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/fn-timeout.svg)](https://greenkeeper.io/)
 
 > Wrap an async function to time out after a specified interval
 
